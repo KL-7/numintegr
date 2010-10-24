@@ -24,6 +24,16 @@ h1 {
 	border-left: 1px solid #CCCCCC;
 }
 
+div#main {
+	padding: 0 0 1px;
+}
+
+img.mail {
+	position: relative;
+	top: 5px;
+	padding: 0 2px;
+}
+
 #main form {
 	margin: 15px;
 }
