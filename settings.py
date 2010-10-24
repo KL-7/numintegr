@@ -4,7 +4,7 @@ import os
 
 BASE_DIR = os.path.dirname(__file__)
 
-DEBUG = True
+DEBUG = 'SERVER_SOFTWARE' in os.environ and 'Development' in os.environ['SERVER_SOFTWARE']
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
