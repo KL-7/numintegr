@@ -1,0 +1,40 @@
+{% extends "base_withback.html" %}
+
+{% block title %}Integration Results{% endblock %}
+
+{% block content %}
+	{% if errors %}
+		<div class="errors-list ui-widget ui-state-error ui-corner-all"> 
+			<p><span class="ui-icon ui-icon-alert"></span> 
+				<strong>Some errors occured while integrating:</strong>
+				<ul>
+				{% for error in errors %}
+					<li>{{ error }}</li>
+				{% endfor %}
+				</ul>
+			</p>
+		</div>
+	{% else %}
+		<table id="results">
+			<thead>
+				<tr>
+					<th width="75%">Method</th>
+					<th>Result</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for method in methods_results %}
+					<tr>
+						<td>
+							<p class="method-name">{{ method.name }}</p>
+							<p class="method-description">{{ method.description }}</p>
+						</td>
+						<td>
+							<p class="method-result">{{ method.result|floatformat:8 }}</p>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	{% endif %}
+{% endblock %}

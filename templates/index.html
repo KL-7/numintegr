@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Numerical Integrator{% endblock %}
+
+{% block content %}
+	<div class="errors-list ui-widget ui-state-error ui-corner-all" style="display: none"> 
+		<p><span class="ui-icon ui-icon-alert"></span> 
+			<strong>Wrong input:</strong>
+			<ul>
+			</ul>
+		</p>
+	</div>
+
+	<form id="inputForm" action="/integrate/" method="post">
+		<input id="function" class="txt" type="text" name="function" value="type function here...">
+		<input type="submit" value="Integrate">
+
+		<br />
+		
+		<div class="options">
+			<label for="lowerLimit">Lower limit:</label>
+			<input id="lowerLimit" class="option" type="text" name="lowerLimit" size="5" value="0">
+
+			<label for="upperLimit">Upper limit:</label>
+			<input id="upperLimit" class="option" type="text" name="upperLimit" size="5" value="1">
+
+			<br />
+
+			<label for="subintervalsNumber">Number of subintervals:</label>
+			<input id="subintervalsNumber" class="option" type="text" name="subintervalsNumber"
+			size="5" value="100">
+		</div>
+	</form>
+
+	<script type="text/javascript">
+		$(function() {
+			$("input:submit").button();
+
+			var clearFunctionInput = function() {
+				if ($("#function").val() == "type function here...") {
+					$("#function").val("");
+				}
+			};
+
+			$("#inputForm").submit(clearFunctionInput);
+
+			$("#function").focus(clearFunctionInput);
+
+			$(".option").focus(function() { this.select(); });
+		});
+	</script>
+
+	<script type="text/javascript" src="{{ MEDIA_URL }}js/validate-input.js"></script>
+{% endblock %}

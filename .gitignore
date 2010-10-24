@@ -1,0 +1,3 @@
+*.pyc
+appengine_django/
+django.zip

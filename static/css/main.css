@@ -1,0 +1,112 @@
+body {
+	font: 14px Verdana, Arial, Helvetica, sans-serif;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+h1 {
+	font-family: Tahoma;
+	font-weight: bold;
+	font-size: 120%;
+	padding: 1em;
+}
+
+.box {
+	width: 700px;
+	margin: 100px auto 0;
+	text-align: center;
+	padding: 20px;
+	border-top: 1px solid #CCCCCC;
+	border-right: 2px solid #CCCCCC;
+	border-bottom: 2px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+}
+
+#main form {
+	margin: 15px;
+}
+
+.errors-list {
+	padding: 0 0.7em;
+	text-align: left;
+}
+
+.errors-list .ui-icon {
+	float: left;
+	margin: 0.1em 0.3em 0.3em;
+}
+
+.errors-list li {
+	padding-left: 7px;
+}
+
+#main input.txt {
+	background: #F9f9f9 repeat scroll 0%;
+	border: 1px solid #999999;
+	font-size: 1em;
+	padding: 8px;
+	width: 318px;
+}
+
+#main input.option {
+	margin: 3px;
+}
+
+.options {
+	padding-top: 8px;
+}
+
+#results {
+	background: none repeat scroll 0 0 #FFFFFF;
+	border-collapse: collapse;
+	font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
+	font-size: 12px;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+	width: 90%;
+}
+
+#results tr > th:first-child, td:first-child {
+	text-align: left;
+}
+
+#results th {
+	border-bottom: 2px solid #CCCCCC;
+	font-size: 16px;
+	font-weight: normal;
+	padding: 10px 8px;
+}
+
+#results td {
+	padding: 5px 8px 0;
+}
+
+#results .method-name {
+	font-weight: bold;
+}
+
+#results .method-result {
+	font-size: 20px;
+}
+
+.contactBox {
+	color: #999;
+	margin: 0 auto;
+	width: 700px;
+	text-align: right;
+}
+
+.contactBox a {
+	color: #999;
+	text-decoration: none;
+	font-size: 11px;
+}
+
+.contactBox a: hover {
+	text-decoration: underline;
+}
