@@ -41,10 +41,14 @@
 					$("#function").val("");
 				}
 			};
-
 			$("#inputForm").submit(clearFunctionInput);
-
 			$("#function").focus(clearFunctionInput);
+
+			$("#function").blur(function() {
+				if ($("#function").val().length == 0) {
+					$("#function").val("type function here...");
+				}
+			});
 
 			$(".option").focus(function() { this.select(); });
 		});

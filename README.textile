@@ -5,5 +5,5 @@ Simple django application for numerical integration configured for running on GA
 **Requrements**
 
 To run this application on GAE server you need (place both in this directory):
-* django.zip (or django/ direcotry) containing Django framework version 1.2 or higher
+* django.zip (or django/ direcotry) containing Django framework version 1.0 or higher
 * appengine_django application (you can get it "here":http://code.google.com/p/google-app-engine-django/)

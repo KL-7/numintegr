@@ -62,6 +62,7 @@ img.mail {
 
 #main input.option {
 	margin: 3px;
+	text-align: right;
 }
 
 .options {
