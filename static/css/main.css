@@ -73,7 +73,6 @@ img.mail {
 	background: none repeat scroll 0 0 #FFFFFF;
 	border-collapse: collapse;
 	font-family: "Lucida Sans Unicode","Lucida Grande",Sans-Serif;
-	font-size: 12px;
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-top: 20px;
@@ -82,13 +81,17 @@ img.mail {
 	width: 90%;
 }
 
+#results tr {
+	border-bottom: 1px solid #E6E6E6;
+}
+
 #results tr > th:first-child, td:first-child {
 	text-align: left;
 }
 
 #results th {
 	border-bottom: 2px solid #CCCCCC;
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: normal;
 	padding: 10px 8px;
 }
