@@ -6,6 +6,7 @@ from parser import parse_function
 import logging
 import math
 import random
+import traceback
 
 
 def integrate(function_string, lower_limit=0, upper_limit=1,
