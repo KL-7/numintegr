@@ -69,7 +69,43 @@ function equal to f((a + b) / 2) on [a, b].'''
     ALPHA = 0.5
 
 
-METHODS = [LeftRectanglesMethod, InnerRectanglesMethod, RightRectanglesMethod]
+class TrapezoidalMethod(NumericalIntegrationMethod):
+
+    name = 'Trapezoidal'
+
+    desc = '''Approximate function f on subinterval [a, b] with a polynomial
+of degree 1 which passes passes through the points (a, f(a)) and (b, f(b)).'''
+
+    def _calculate(self, n, h):
+        fa = self.function(self.lower_limit)
+        fb = self.function(self.upper_limit)
+        xk = (self.lower_limit + k * h for k in xrange(1, n))
+        return h * ((fa + fb) / 2 + sum(map(self.function, xk)))
+
+
+class SimpsonMethod(NumericalIntegrationMethod):
+
+    name = 'Simpson'
+
+    desc = '''Approximate function f on subinterval [a, b] with a polynomial
+of degree 2 which passes passes through the points (a, f(a)),
+((a+b) /2, f((a+b) / 2)) and (b, f(b)).'''
+
+    def _calculate(self, n, h):
+        fa = self.function(self.lower_limit)
+        fb = self.function(self.upper_limit)
+        xk = [self.lower_limit + k * h / 2 for k in xrange(1, 2 * n)]
+        return h / 6 * (fa + 4 * sum(map(self.function, xk[::2])) +
+                         2 * sum(map(self.function, xk[1::2])) + fb)
+
+
+METHODS = [
+    LeftRectanglesMethod,
+    InnerRectanglesMethod,
+    RightRectanglesMethod,
+    TrapezoidalMethod,
+    SimpsonMethod
+]
 
 
 
