@@ -12,23 +12,28 @@
 	</div>
 
 	<form id="inputForm" action="/integrate/" method="post">
-		<input id="function" class="txt" type="text" name="function" value="type function here...">
+		<input id="function" type="text" name="function" value="type function here...">
 		<input type="submit" value="Integrate">
 
 		<br />
 		
 		<div class="options">
-			<label for="lowerLimit">Lower limit:</label>
-			<input id="lowerLimit" class="option" type="text" name="lowerLimit" size="5" value="0">
+			<div class="option">
+				<label for="lowerLimit">Lower limit:</label>
+				<input id="lowerLimit" type="text" name="lowerLimit" size="5" value="0">
+			</div>
 
-			<label for="upperLimit">Upper limit:</label>
-			<input id="upperLimit" class="option" type="text" name="upperLimit" size="5" value="1">
+			<div class="option">
+				<label for="upperLimit">Upper limit:</label>
+				<input id="upperLimit" type="text" name="upperLimit" size="5" value="1">
+			</div>
 
 			<br />
 
-			<label for="subintervalsNumber">Number of subintervals:</label>
-			<input id="subintervalsNumber" class="option" type="text" name="subintervalsNumber"
-			size="5" value="100">
+			<div class="option">
+				<label for="subintervalsNumber">Number of subintervals:</label>
+				<input id="subintervalsNumber" type="text" name="subintervalsNumber" size="5" value="100">
+			</div>
 		</div>
 	</form>
 

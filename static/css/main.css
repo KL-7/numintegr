@@ -1,5 +1,6 @@
 body {
 	font: 14px Verdana, Arial, Helvetica, sans-serif;
+	background: #F5F5F5;
 }
 
 p {
@@ -18,10 +19,8 @@ h1 {
 	margin: 100px auto 0;
 	text-align: center;
 	padding: 20px;
-	border-top: 1px solid #CCCCCC;
-	border-right: 2px solid #CCCCCC;
-	border-bottom: 2px solid #CCCCCC;
-	border-left: 1px solid #CCCCCC;
+	border: 1px solid #CCCCCC;
+	background: white;
 }
 
 div#main {
@@ -52,7 +51,7 @@ img.mail {
 	padding-left: 7px;
 }
 
-#main input.txt {
+#main #function {
 	background: #F9f9f9 repeat scroll 0%;
 	border: 1px solid #999999;
 	font-size: 1em;
@@ -60,13 +59,17 @@ img.mail {
 	width: 318px;
 }
 
-#main input.option {
-	margin: 3px;
-	text-align: right;
+#main .options {
+	padding-top: 8px;
 }
 
-.options {
-	padding-top: 8px;
+#main .option {
+	margin: 2px 10px;
+	display: inline-block;
+}
+
+#main .option input {
+	text-align: right;
 }
 
 #results {
@@ -108,19 +111,19 @@ img.mail {
 	font-size: 20px;
 }
 
-.contactBox {
-	color: #999;
+.navigation {
+	color: #777;
 	margin: 0 auto;
 	width: 700px;
 	text-align: right;
 }
 
-.contactBox a {
-	color: #999;
+.navigation a {
+	color: #777;
 	text-decoration: none;
 	font-size: 11px;
 }
 
-.contactBox a: hover {
+.navigation a: hover {
 	text-decoration: underline;
 }
