@@ -1,0 +1,11 @@
+{% load nav_item %}
+
+<div class="navigation">
+	{% nav_item request "Home" "/" %}
+	|
+	<a href="http://github.com/KL-7/numintegr">Source</a>
+	|
+	{% nav_item request "Help" "/help/" %}
+	|
+	{% nav_item request "About" "/about/" %}
+</div>
