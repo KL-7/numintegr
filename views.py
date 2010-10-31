@@ -1,5 +1,9 @@
+from django import http
+from django.conf import settings
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
+from django.template import Context
+from django.template import loader
 from django.template import RequestContext
 
 from core import numi
@@ -46,3 +50,18 @@ def integrate(request):
                               { 'methods_results': methods_results,
                                 'errors': errors },
                               RequestContext(request))
+
+
+def server_error(request, template_name='500.html'):
+    """
+    500 error handler.
+
+    Templates: `500.html`
+    Context:
+        MEDIA_URL
+            Path of static media (e.g. "media.example.org")
+    """
+    t = loader.get_template(template_name) # Requeres 500.html template.
+    return http.HttpResponseServerError(t.render(Context({
+        'MEDIA_URL': settings.MEDIA_URL
+    })))
