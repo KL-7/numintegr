@@ -11,16 +11,16 @@ def index(request):
 def integrate(request):
     errors = []
 
-    function_string = request.POST['function']
+    function_string = request.REQUEST['function']
 
     try:
-        lower_limit = float(request.POST['lowerLimit'])
-        upper_limit = float(request.POST['upperLimit'])
+        lower_limit = float(request.REQUEST['lowerLimit'])
+        upper_limit = float(request.REQUEST['upperLimit'])
     except ValueError:
         errors.append('integration limits should be float numbers')
 
     try:
-        subintervals_number = int(request.POST['subintervalsNumber'])
+        subintervals_number = int(request.REQUEST['subintervalsNumber'])
         if subintervals_number <= 0:
             raise ValueError
     except ValueError:
