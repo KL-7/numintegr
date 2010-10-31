@@ -4,6 +4,9 @@ from django.template import RequestContext
 
 from core import numi
 
+
+MAX_SUBINTERVALS_NUMBER = 100000
+
 def index(request):
     return render_to_response('index.html',
                               context_instance=RequestContext(request))
@@ -25,6 +28,10 @@ def integrate(request):
             raise ValueError
     except ValueError:
         errors.append('number of subintervals should be positive integer')
+
+    if subintervals_number > MAX_SUBINTERVALS_NUMBER:
+        errors.append('number of subintervals should be not greater than %d' %
+                      MAX_SUBINTERVALS_NUMBER)
 
     if not errors:
         methods_results, methods_errors = numi.integrate(function_string,
