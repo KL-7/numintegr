@@ -74,7 +74,7 @@ class TrapezoidalMethod(NumericalIntegrationMethod):
     name = 'Trapezoidal'
 
     desc = '''Approximate function f on subinterval [a, b] with a polynomial
-of degree 1 which passes passes through the points (a, f(a)) and (b, f(b)).'''
+of degree 1 which  passes through the points (a, f(a)) and (b, f(b)).'''
 
     def _calculate(self, n, h):
         fa = self.function(self.lower_limit)
@@ -88,7 +88,7 @@ class SimpsonMethod(NumericalIntegrationMethod):
     name = 'Simpson'
 
     desc = '''Approximate function f on subinterval [a, b] with a polynomial
-of degree 2 which passes passes through the points (a, f(a)),
+of degree 2 which  passes through the points (a, f(a)),
 ((a+b) /2, f((a+b) / 2)) and (b, f(b)).'''
 
     def _calculate(self, n, h):
