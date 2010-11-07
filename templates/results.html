@@ -1,12 +1,14 @@
 {% extends "base_withback.html" %}
 
+{% load i18n %}
+
 {% block title %}Integration Results{% endblock %}
 
 {% block content %}
 	{% if errors %}
 		<div class="errors-list ui-widget ui-state-error ui-corner-all"> 
 			<p><span class="ui-icon ui-icon-alert"></span> 
-				<strong>Some errors occured while integrating:</strong>
+				<strong>{% trans "Some errors occured while integrating:" %}</strong>
 				<ul>
 				{% for error in errors %}
 					<li>{{ error }}</li>
@@ -18,8 +20,8 @@
 		<table id="results">
 			<thead>
 				<tr>
-					<th width="75%">Method</th>
-					<th>Result</th>
+					<th width="75%">{% trans "Method" %}</th>
+					<th>{% trans "Result" %}</th>
 				</tr>
 			</thead>
 			<tbody>

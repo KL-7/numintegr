@@ -1,37 +1,39 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block title %}Numerical Integrator{% endblock %}
 
 {% block content %}
 	<div class="errors-list ui-widget ui-state-error ui-corner-all" style="display: none"> 
 		<p><span class="ui-icon ui-icon-alert"></span> 
-			<strong>Wrong input:</strong>
+			<strong>{% trans "Wrong input:" %}</strong>
 			<ul>
 			</ul>
 		</p>
 	</div>
 
 	<form id="inputForm" action="/integrate/" method="get">
-		<input id="function" type="text" name="function" value="type function here...">
-		<input type="submit" value="Integrate">
+		<input id="function" type="text" name="function" value="{% trans "type function here..." %}">
+		<input type="submit" value="{% trans "Integrate" %}">
 
 		<br />
 		
 		<div class="options">
 			<div class="option">
-				<label for="lowerLimit">Lower limit:</label>
+				<label for="lowerLimit">{% trans "Lower limit:" %}</label>
 				<input id="lowerLimit" type="text" name="lowerLimit" size="5" value="0">
 			</div>
 
 			<div class="option">
-				<label for="upperLimit">Upper limit:</label>
+				<label for="upperLimit">{% trans "Upper limit:" %}</label>
 				<input id="upperLimit" type="text" name="upperLimit" size="5" value="1">
 			</div>
 
 			<br />
 
 			<div class="option">
-				<label for="subintervalsNumber">Number of subintervals:</label>
+				<label for="subintervalsNumber">{% trans "Number of subintervals:" %}</label>
 				<input id="subintervalsNumber" type="text" name="subintervalsNumber" size="5" maxlength="5" value="100">
 			</div>
 		</div>
@@ -42,7 +44,7 @@
 			$("input:submit").button();
 
 			var clearFunctionInput = function() {
-				if ($("#function").val() == "type function here...") {
+				if ($("#function").val() == "{% trans "type function here..." %}") {
 					$("#function").val("");
 				}
 			};
@@ -51,7 +53,49 @@
 
 			$(".option").focus(function() { this.select(); });
 		});
-	</script>
+		$(document).ready(function() {
+			$("#inputForm").submit(function() {
+				var errors = new Array();
 
-	<script type="text/javascript" src="{{ MEDIA_URL }}js/validate-input.js"></script>
+				var inputs = $("#inputForm :input");
+				for (var i = 0; i < inputs.length; ++i) {
+					if (inputs[i].value.length == 0) {
+						errors.push('{% trans "all fields should be filled" %}');
+						break;
+					}
+				}
+
+				var lowerLimit = $("#lowerLimit");
+				var upperLimit = $("#upperLimit");
+				var subintervalsNumber = $("#subintervalsNumber");
+
+				var lowerLimitValue = parseFloat(lowerLimit.val());
+				var upperLimitValue = parseFloat(upperLimit.val());
+
+				if (lowerLimitValue != lowerLimit.val() || upperLimitValue != upperLimit.val()) {
+					errors.push('{% trans "integration limits should be float numbers" %}');
+				}
+
+				var subintervalsNumberValue = parseInt(subintervalsNumber.val());
+
+				if (subintervalsNumberValue != subintervalsNumber.val() || subintervalsNumberValue <= 0) {
+					errors.push('{% trans "number of subintervals should be positive integer" %}');
+				}
+
+				if (errors.length > 0) {
+					var errorList = $(".errors-list ul");
+					errorList.children().remove();
+					for (var i = 0; i < errors.length; ++i) {
+						if (errors[i]) {
+							errorList.append("<li>" + errors[i] + "</li>");
+						}
+					}
+					$(".errors-list").fadeIn();
+					return false;
+				}
+
+				return true;
+			});
+		});
+	</script>
 {% endblock %}

@@ -23,6 +23,10 @@ urlpatterns += patterns('django.views.generic.simple',
     (r'^help/$',  'direct_to_template', { 'template': 'help.html' }),
 )
 
+urlpatterns += patterns('',
+    (r'^i18n/', include('django.conf.urls.i18n')),
+)
+
 # 500 error handler
 handler500 = views.server_error
 

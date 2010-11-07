@@ -1,0 +1,175 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-11-07 22:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#: settings.py:44
+msgid "English"
+msgstr "Английский"
+
+#: settings.py:45
+msgid "Russian"
+msgstr "Русский"
+
+#: core/methods.py:48
+msgid "Left Rectangles"
+msgstr "Левых прямоугольников"
+
+#: core/methods.py:50
+msgid ""
+"Approximate function f on subinterval [a, b] with constant a\n"
+"function equal to f(a) on [a, b]."
+msgstr ""
+
+#: core/methods.py:56
+msgid "Right Rectangles"
+msgstr "Правых прямоугольников"
+
+#: core/methods.py:58
+msgid ""
+"Approximate function f on subinterval [a, b] with constant a\n"
+"function equal to f(b) on [a, b]."
+msgstr ""
+
+#: core/methods.py:66
+msgid "Inner Rectangles"
+msgstr "Внутренних прямоугольников"
+
+#: core/methods.py:68
+msgid ""
+"Approximate function f on subinterval [a, b] with constant a\n"
+"function equal to f((a + b) / 2) on [a, b]."
+msgstr ""
+
+#: core/methods.py:76
+msgid "Trapezoidal"
+msgstr "Трапеций"
+
+#: core/methods.py:78
+msgid ""
+"Approximate function f on subinterval [a, b] with a polynomial\n"
+"of degree 1 which  passes through the points (a, f(a)) and (b, f(b))."
+msgstr ""
+
+#: core/methods.py:90
+msgid "Simpson"
+msgstr "Симпосна"
+
+#: core/methods.py:92
+msgid ""
+"Approximate function f on subinterval [a, b] with a polynomial\n"
+"of degree 2 which  passes through the points (a, f(a)),\n"
+"((a+b) /2, f((a+b) / 2)) and (b, f(b))."
+msgstr ""
+
+#: core/numi.py:32
+msgid "Failed to parse the function"
+msgstr "Не удалось распарсить функцию"
+
+#: core/numi.py:34
+msgid "The function contains some undefined functions or variables"
+msgstr "Функция содержит неопределенные функции или переменные"
+
+#: core/numi.py:37
+msgid "The function is not defined on this interval"
+msgstr "Функция не определена на данном интервале"
+
+#: core/numi.py:39
+msgid "The function is not defined on this interval (zero division occured)"
+msgstr "Функция не определена на данном интервале (деление на ноль)"
+
+#: core/numi.py:42
+msgid "Sorry, integration failed for unknown reason"
+msgstr "Извините, интергирование завершилось неудачно по неизвестной причине"
+
+#: templates/about.html:8
+msgid "About? What about?"
+msgstr "Когда-нибудь тут будет описание проекта"
+
+#: templates/base_withback.html:6
+msgid "Back"
+msgstr "Назад"
+
+#: templates/help.html:8
+msgid "Need some help? Then press [F1] key."
+msgstr "Когда-нибудь тут будет полезная информация"
+
+#: templates/index.html:10
+msgid "Wrong input:"
+msgstr "Неверный ввод:"
+
+#: templates/index.html:17 templates/index.html.py:47
+msgid "type function here..."
+msgstr "введите функцию..."
+
+#: templates/index.html:18
+msgid "Integrate"
+msgstr "Интегрировать"
+
+#: templates/index.html:24
+msgid "Lower limit:"
+msgstr "Нижний предел:"
+
+#: templates/index.html:29
+msgid "Upper limit:"
+msgstr "Верхний предел:"
+
+#: templates/index.html:36
+msgid "Number of subintervals:"
+msgstr "Число интервалов:"
+
+#: templates/index.html:63
+msgid "all fields should be filled"
+msgstr "все поля должны быть заполнены"
+
+#: templates/index.html:76
+msgid "integration limits should be float numbers"
+msgstr "пределы интегрирования должны быть вещественными числами"
+
+#: templates/index.html:82
+msgid "number of subintervals should be positive integer"
+msgstr "число интервалов должно быть натуральным"
+
+#: templates/navigation.html:6
+msgid "Home"
+msgstr "Главная"
+
+#: templates/navigation.html:8
+msgid "Source"
+msgstr "Исходники"
+
+#: templates/navigation.html:10
+msgid "Help"
+msgstr "Помощь"
+
+#: templates/navigation.html:12
+msgid "About"
+msgstr "О проекте"
+
+#: templates/results.html:11
+msgid "Some errors occured while integrating:"
+msgstr "В ходе интегрирования возникли некоторые ошибки:"
+
+#: templates/results.html:23
+msgid "Method"
+msgstr "Метод"
+
+#: templates/results.html:24
+msgid "Result"
+msgstr "Результат"

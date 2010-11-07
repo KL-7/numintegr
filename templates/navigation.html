@@ -1,11 +1,13 @@
+{% load i18n %}
+
 {% load nav_item %}
 
 <div class="navigation">
-	{% nav_item request "Home" "/" %}
+	{% nav_item request _("Home") "/" %}
 	|
-	<a href="http://github.com/KL-7/numintegr">Source</a>
+	<a href="http://github.com/KL-7/numintegr">{% trans "Source" %}</a>
 	|
-	{% nav_item request "Help" "/help/" %}
+	{% nav_item request _("Help") "/help/" %}
 	|
-	{% nav_item request "About" "/about/" %}
+	{% nav_item request _("About") "/about/" %}
 </div>

@@ -1,7 +1,9 @@
 {% extends "base_withback.html" %}
 
+{% load i18n %}
+
 {% block title %}Help{% endblock %}
 
 {% block content %}
-	<p>Need some help? Then press [F1] key.</p>
+	<p>{% trans "Need some help? Then press [F1] key." %}</p>
 {% endblock %}

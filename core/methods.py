@@ -1,5 +1,7 @@
 from __future__ import division
 
+from django.utils.translation import ugettext_lazy as _
+
 
 class NumericalIntegrationMethod(object):
 
@@ -43,38 +45,38 @@ by the values of the function.'''
 
 class LeftRectanglesMethod(RectanglesMethod):
 
-    name = 'Left Rectangles'
+    name = _('Left Rectangles')
 
-    desc = '''Approximate function f on subinterval [a, b] with constant a
-function equal to f(a) on [a, b].'''
+    desc = _('''Approximate function f on subinterval [a, b] with constant a
+function equal to f(a) on [a, b].''')
 
 
 class RightRectanglesMethod(RectanglesMethod):
 
-    name = 'Right Rectangles'
+    name = _('Right Rectangles')
 
-    desc = '''Approximate function f on subinterval [a, b] with constant a
-function equal to f(b) on [a, b].'''
+    desc = _('''Approximate function f on subinterval [a, b] with constant a
+function equal to f(b) on [a, b].''')
 
     ALPHA = 1
 
 
 class InnerRectanglesMethod(RectanglesMethod):
 
-    name = 'Inner Rectangles'
+    name = _('Inner Rectangles')
 
-    desc = '''Approximate function f on subinterval [a, b] with constant a
-function equal to f((a + b) / 2) on [a, b].'''
+    desc = _('''Approximate function f on subinterval [a, b] with constant a
+function equal to f((a + b) / 2) on [a, b].''')
 
     ALPHA = 0.5
 
 
 class TrapezoidalMethod(NumericalIntegrationMethod):
 
-    name = 'Trapezoidal'
+    name = _('Trapezoidal')
 
-    desc = '''Approximate function f on subinterval [a, b] with a polynomial
-of degree 1 which  passes through the points (a, f(a)) and (b, f(b)).'''
+    desc = _('''Approximate function f on subinterval [a, b] with a polynomial
+of degree 1 which  passes through the points (a, f(a)) and (b, f(b)).''')
 
     def _calculate(self, n, h):
         fa = self.function(self.lower_limit)
@@ -85,11 +87,11 @@ of degree 1 which  passes through the points (a, f(a)) and (b, f(b)).'''
 
 class SimpsonMethod(NumericalIntegrationMethod):
 
-    name = 'Simpson'
+    name = _('Simpson')
 
-    desc = '''Approximate function f on subinterval [a, b] with a polynomial
+    desc = _('''Approximate function f on subinterval [a, b] with a polynomial
 of degree 2 which  passes through the points (a, f(a)),
-((a+b) /2, f((a+b) / 2)) and (b, f(b)).'''
+((a+b) /2, f((a+b) / 2)) and (b, f(b)).''')
 
     def _calculate(self, n, h):
         fa = self.function(self.lower_limit)

@@ -1,5 +1,6 @@
 from __future__ import division
 
+from django.utils.translation import ugettext_lazy as _
 from methods import METHODS
 from parser import parse_function
 
@@ -28,17 +29,17 @@ def integrate(function_string, lower_limit=0, upper_limit=1,
                                   'result': result
                                 }]
     except SyntaxError:
-        errors.append('Failed to parse the function')
+        errors.append(_('Failed to parse the function'))
     except NameError:
-        errors.append('The function contains some undefined functions or '
-                      'variables')
+        errors.append(_('The function contains some undefined functions or '
+                      'variables'))
     except ValueError:
-        errors.append('The function is not defined on this interval')
+        errors.append(_('The function is not defined on this interval'))
     except ZeroDivisionError:
-        errors.append('The function is not defined on this interval '
-                      '(zero division occured)')
+        errors.append(_('The function is not defined on this interval '
+                      '(zero division occured)'))
     except Exception, e:
-        errors.append('Sorry, integration failed for unknown reason')
+        errors.append(_('Sorry, integration failed for unknown reason'))
         logging.error('Integration error: f="%s", lower_limit=%2.2e, '
                       'upper_limit=%2.2e, subintervals_number=%d' %
                       (function_string, lower_limit, upper_limit,
