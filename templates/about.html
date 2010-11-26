@@ -2,8 +2,16 @@
 
 {% load i18n %}
 
-{% block title %}About{% endblock %}
+{% block title %}{% trans "About" %}{% endblock %}
 
 {% block content %}
-	<p>{% trans "About? What about?" %}</p>
+	<h1>{% trans "About the project" %}</h1>
+	<div class="info">
+		<p><span class="numintegr">Numintegr</span> {% trans 'is a simple web-app for performing <a title="Numerical Integration article at Wikipedia.org" href="http://en.wikipedia.org/wiki/Numerical_integration">numerical integration</a> using several basic method:' %}</p>
+		<ul>
+			{% for method in methods %}
+				<li>{{ method.name }}</li>
+			{% endfor %}
+		</ul>
+	</div>
 {% endblock %}

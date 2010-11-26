@@ -14,7 +14,7 @@
 	</div>
 
 	<form id="inputForm" action="/integrate/" method="get">
-		<input id="function" type="text" name="function" value="{% trans "type function here..." %}">
+		<input id="function" type="text" name="function" value="type function of x here...">
 		<input type="submit" value="{% trans "Integrate" %}">
 
 		<br />
@@ -43,8 +43,10 @@
 		$(function() {
 			$("input:submit").button();
 
+			var functionStub = "{% trans "type function of x here..." %}";
+			$("#function").val(functionStub);
 			var clearFunctionInput = function() {
-				if ($("#function").val() == "{% trans "type function here..." %}") {
+				if ($("#function").val() == functionStub) {
 					$("#function").val("");
 				}
 			};

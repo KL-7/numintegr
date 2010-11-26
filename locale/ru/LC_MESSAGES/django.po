@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-07 22:25+0200\n"
+"POT-Creation-Date: 2010-11-27 09:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,55 +28,61 @@ msgid "Russian"
 msgstr "Русский"
 
 #: core/methods.py:48
-msgid "Left Rectangles"
-msgstr "Левых прямоугольников"
+msgid "Left rectangles rule"
+msgstr "Правило левых прямоугольников"
 
 #: core/methods.py:50
 msgid ""
 "Approximate function f on subinterval [a, b] with constant a\n"
 "function equal to f(a) on [a, b]."
-msgstr ""
+msgstr "Аппроксимирует функцию f на интервале [a, b] постоянной "
+"функцией, равной f(a) на [a, b]."
 
 #: core/methods.py:56
-msgid "Right Rectangles"
-msgstr "Правых прямоугольников"
+msgid "Right rectangles rule"
+msgstr "Правило правых прямоугольников"
 
 #: core/methods.py:58
 msgid ""
 "Approximate function f on subinterval [a, b] with constant a\n"
 "function equal to f(b) on [a, b]."
-msgstr ""
+msgstr "Аппроксимирует функцию f на интервале [a, b] постоянной "
+"функцией, равной f(b) на [a, b]."
 
 #: core/methods.py:66
-msgid "Inner Rectangles"
-msgstr "Внутренних прямоугольников"
+msgid "Inner rectangles rule"
+msgstr "Правило внутренних прямоугольников"
 
 #: core/methods.py:68
 msgid ""
 "Approximate function f on subinterval [a, b] with constant a\n"
 "function equal to f((a + b) / 2) on [a, b]."
-msgstr ""
+msgstr "Аппроксимирует функцию f на интервале [a, b] постоянной "
+"функцией, равное f((a + b) / 2) на [a, b]."
 
 #: core/methods.py:76
-msgid "Trapezoidal"
-msgstr "Трапеций"
+msgid "Trapezoidal rule"
+msgstr "Правило трапеций"
 
 #: core/methods.py:78
 msgid ""
 "Approximate function f on subinterval [a, b] with a polynomial\n"
 "of degree 1 which  passes through the points (a, f(a)) and (b, f(b))."
-msgstr ""
+msgstr "Аппроксимирует функцию f на интервале [a, b] полиномом первой "
+"степени (линейной функцией), проходящим через точки (a, f(a)) и (b, f(b))."
 
 #: core/methods.py:90
-msgid "Simpson"
-msgstr "Симпосна"
+msgid "Simpson's rule"
+msgstr "Правило Симпосна"
 
 #: core/methods.py:92
 msgid ""
 "Approximate function f on subinterval [a, b] with a polynomial\n"
 "of degree 2 which  passes through the points (a, f(a)),\n"
 "((a+b) /2, f((a+b) / 2)) and (b, f(b))."
-msgstr ""
+msgstr "Аппроксимирует функцию f на интервале [a, b] полиномом второй "
+"степени, проходящим через точки (a, f(a)), "
+"((a+b) /2, f((a+b) / 2)) и (b, f(b))."
 
 #: core/numi.py:32
 msgid "Failed to parse the function"
@@ -98,25 +104,135 @@ msgstr "Функция не определена на данном интерв�
 msgid "Sorry, integration failed for unknown reason"
 msgstr "Извините, интергирование завершилось неудачно по неизвестной причине"
 
+#: core/parser.py:10
+msgid "pi constant (3.14159)"
+msgstr "константа pi (3.14159)"
+
+#: core/parser.py:12
+msgid "e costant (2.71828)"
+msgstr "константа e (2.71828)"
+
+#: core/parser.py:14 core/parser.py:48
+msgid "x raised to the power of y"
+msgstr "x в степени y"
+
+#: core/parser.py:17
+msgid "trigonometric cosine of x"
+msgstr "тригонометрический косинус x"
+
+#: core/parser.py:19
+msgid "trigonometric sine of x"
+msgstr "тригонометрический синус x"
+
+#: core/parser.py:21
+msgid "trigonometric tangent of x"
+msgstr "тригонометрический тангенс x"
+
+#: core/parser.py:23
+msgid "trigonometric cotangent of x"
+msgstr "тригонометрический котангенс x"
+
+#: core/parser.py:26
+msgid "arc cosine of x"
+msgstr "арккосинус x"
+
+#: core/parser.py:28
+msgid "arc sine of x"
+msgstr "арксинус x"
+
+#: core/parser.py:30
+msgid "arc tangent of x"
+msgstr "арктангенс x"
+
+#: core/parser.py:32
+msgid "arc cotangent of x"
+msgstr "арккотангенс x"
+
+#: core/parser.py:36
+msgid "hyperbolic cosine of x"
+msgstr "гипербоилческий косинус x"
+
+#: core/parser.py:38
+msgid "hyperbolic sine of x"
+msgstr "гиперболический синус x"
+
+#: core/parser.py:40
+msgid "hyperbolic tangent of x"
+msgstr "гиперболический тангенс x"
+
+#: core/parser.py:42
+msgid "hyperbolic cotangent of x"
+msgstr "гиперболический котангенс x"
+
+#: core/parser.py:46
+msgid "absolute value of x"
+msgstr "абсолютное значение x"
+
+#: core/parser.py:50
+msgid "e raised to the power of x"
+msgstr "e в степени x"
+
+#: core/parser.py:52
+msgid "logarithm of x to the given base"
+msgstr "логарифм x по основанию base"
+
+#: core/parser.py:54
+msgid "natural logarithm (base e) of x"
+msgstr "натуральный (по основанию e) логарифм x"
+
+#: core/parser.py:56
+msgid "base 10 logarithm of x"
+msgstr "десятичный логарифм x"
+
+#: core/parser.py:58
+msgid "square root of x"
+msgstr "корень из x"
+
+#: templates/about.html:5 templates/navigation.html:12
+msgid "About"
+msgstr "О проекте"
+
 #: templates/about.html:8
-msgid "About? What about?"
-msgstr "Когда-нибудь тут будет описание проекта"
+msgid "About the project"
+msgstr "О проекте"
+
+#: templates/about.html:10
+msgid ""
+"is a simple web-app for performing <a title=\"Numerical Integration article "
+"at Wikipedia.org\" href=\"http://en.wikipedia.org/wiki/Numerical_integration"
+"\">numerical integration</a> using several basic method:"
+msgstr ""
+"простое веб-приложение для численного интегрирования с использованием "
+"нескольких базовых методов:"
 
 #: templates/base_withback.html:6
 msgid "Back"
 msgstr "Назад"
 
-#: templates/help.html:8
-msgid "Need some help? Then press [F1] key."
-msgstr "Когда-нибудь тут будет полезная информация"
+#: templates/help.html:5 templates/help.html.py:8 templates/navigation.html:10
+msgid "Help"
+msgstr "Помощь"
+
+#: templates/help.html:10
+msgid ""
+"The function you're goind to integrate should be a function of the only x "
+"argument and it should be defined everywhere on the interval of integration."
+msgstr ""
+"Подынтегральная функция должна быть функцией единственного аргумента x, "
+"всюду определенной на промежутке интегрирования."
+
+#: templates/help.html:11
+msgid ""
+"In the function definition you can use all basic arithmetic operators (+, "
+"&minus;, *, /) and some other functions that are listed below:"
+msgstr ""
+"В определнии функции Вы можете использовать все базовые арифметические "
+"операторы (+, &minus;, *, /) и некоторые дополнительные функции, "
+"представленные ниже:"
 
 #: templates/index.html:10
 msgid "Wrong input:"
 msgstr "Неверный ввод:"
-
-#: templates/index.html:17 templates/index.html.py:47
-msgid "type function here..."
-msgstr "введите функцию..."
 
 #: templates/index.html:18
 msgid "Integrate"
@@ -134,15 +250,19 @@ msgstr "Верхний предел:"
 msgid "Number of subintervals:"
 msgstr "Число интервалов:"
 
-#: templates/index.html:63
+#: templates/index.html:46
+msgid "type function of x here..."
+msgstr "введите функцию от x..."
+
+#: templates/index.html:65
 msgid "all fields should be filled"
 msgstr "все поля должны быть заполнены"
 
-#: templates/index.html:76
+#: templates/index.html:78
 msgid "integration limits should be float numbers"
 msgstr "пределы интегрирования должны быть вещественными числами"
 
-#: templates/index.html:82
+#: templates/index.html:84
 msgid "number of subintervals should be positive integer"
 msgstr "число интервалов должно быть натуральным"
 
@@ -154,13 +274,9 @@ msgstr "Главная"
 msgid "Source"
 msgstr "Исходники"
 
-#: templates/navigation.html:10
-msgid "Help"
-msgstr "Помощь"
-
-#: templates/navigation.html:12
-msgid "About"
-msgstr "О проекте"
+#: templates/results.html:5
+msgid "Integration Results"
+msgstr "Результаты интегрирования"
 
 #: templates/results.html:11
 msgid "Some errors occured while integrating:"

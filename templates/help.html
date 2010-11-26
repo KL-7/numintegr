@@ -2,8 +2,17 @@
 
 {% load i18n %}
 
-{% block title %}Help{% endblock %}
+{% block title %}{% trans "Help" %}{% endblock %}
 
 {% block content %}
-	<p>{% trans "Need some help? Then press [F1] key." %}</p>
+    <h1>{% trans "Help" %}</h1>
+	<div class="info">
+		<p>{% trans "The function you're goind to integrate should be a function of the only x argument and it should be defined everywhere on the interval of integration." %}</p>
+		<p>{% trans "In the function definition you can use all basic arithmetic operators (+, &minus;, *, /) and some other functions that are listed below:" %}</p>
+		<ul>
+			{% for function in functions %}
+			<li><span class="function-name">{{ function.name }}</span> &ndash; <span class="function-description">{{ function.desc }}</span></li>
+			{% endfor %}
+		</ul>
+	</div>
 {% endblock %}
