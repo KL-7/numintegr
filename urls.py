@@ -8,6 +8,8 @@ from django.conf.urls.defaults import *
 urlpatterns = patterns('',
     ('^$', views.index),
     ('^integrate/$', views.integrate),
+    ('^about/$', views.about),
+    ('^help/$', views.help),
 )
 
 # static files urls
@@ -15,12 +17,6 @@ urlpatterns += patterns('',
     (r'^static/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
     (r'^favicon\.ico$', 'django.views.generic.simple.redirect_to', {'url': '/static/images/favicon.ico'}),
-)
-
-# static pages urls
-urlpatterns += patterns('django.views.generic.simple',
-    (r'^about/$', 'direct_to_template', { 'template': 'about.html' }),
-    (r'^help/$',  'direct_to_template', { 'template': 'help.html' }),
 )
 
 # 500 error handler

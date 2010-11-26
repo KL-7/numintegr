@@ -6,7 +6,9 @@ from django.template import Context
 from django.template import loader
 from django.template import RequestContext
 
+from core import methods
 from core import numi
+from core import parser
 
 
 MAX_SUBINTERVALS_NUMBER = 100000
@@ -49,6 +51,22 @@ def integrate(request):
     return render_to_response('results.html',
                               { 'methods_results': methods_results,
                                 'errors': errors },
+                              RequestContext(request))
+
+def about(request):
+    return render_to_response('about.html', { 'methods' : methods.METHODS },
+                              RequestContext(request))
+
+def help(request):
+    functions = []
+    for function in parser.functions:
+        if 'name' in function:
+            functions.append({
+                'name': function['name'],
+                'desc': function.get('desc', 'No description')
+            })
+
+    return render_to_response('help.html', { 'functions' : functions },
                               RequestContext(request))
 
 

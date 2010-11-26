@@ -12,7 +12,7 @@
 	</div>
 
 	<form id="inputForm" action="/integrate/" method="get">
-		<input id="function" type="text" name="function" value="type function here...">
+		<input id="function" type="text" name="function" value="type function of x here...">
 		<input type="submit" value="Integrate">
 
 		<br />
@@ -41,8 +41,10 @@
 		$(function() {
 			$("input:submit").button();
 
+			var functionStub = "type function of x here...";
+			$("#function").val(functionStub);
 			var clearFunctionInput = function() {
-				if ($("#function").val() == "type function here...") {
+				if ($("#function").val() == functionStub) {
 					$("#function").val("");
 				}
 			};
