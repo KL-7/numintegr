@@ -121,9 +121,9 @@ img.mail {
 
 .navigation {
 	color: #777;
-	margin: 0 auto;
-	width: 700px;
 	text-align: right;
+	float: right;
+	margin-top: 3px;
 }
 
 .navigation a {
@@ -152,4 +152,14 @@ img.mail {
 
 .function-name {
 	font-weight: bold;
+}
+
+.language-bar {
+	float: left;
+	margin-top: 8px;
+}
+
+.footer {
+	width: 740px;
+	margin: 0 auto 100px;
 }

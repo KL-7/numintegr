@@ -15,7 +15,8 @@ MAX_SUBINTERVALS_NUMBER = 100000
 
 def index(request):
     import logging
-    logging.info(request.LANGUAGE_CODE)
+#    logging.info(request.LANGUAGE_CODE)
+#    logging.info(request.COOKIES.get('django_language', 'none'))
     return render_to_response('index.html',
                               context_instance=RequestContext(request))
 

@@ -1,0 +1,17 @@
+{% load i18n %}
+
+<div class="language-bar">
+	<form action="/i18n/setlang/" method="post">
+		{% csrf_token %}
+		<select id="language_select" name="language">
+			{% for lang in LANGUAGES %}
+				<option value="{{ lang.0 }}" {% if LANGUAGE_CODE == lang.0 %} selected="yes" {% endif %}>{{ lang.1 }}</option>
+			{% endfor %}
+		</select>
+		<script type="text/javascript">
+			$('#language_select').change(function(e) {
+				$('#language_select').closest('form').submit();
+			});
+		</script>
+	</form>
+</div>

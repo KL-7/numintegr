@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os
 
 # Django settings for numintegr project.
@@ -29,8 +31,7 @@ TIME_ZONE = 'Europe/Minsk'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-#LANGUAGE_CODE = 'en-us'
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = 'en-us'
 
 SITE_ID = 1
 
@@ -41,9 +42,11 @@ USE_I18N = True
 _ = lambda s: s
 
 LANGUAGES = (
-        ('en', _('English')),
-        ('ru', _('Russian')),
+        ('en', 'English'),
+        ('ru', u'Русский'),
 )
+
+LANGUAGE_COOKIE_NAME = 'numintegr_language'
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"

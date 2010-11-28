@@ -1,4 +1,5 @@
 *.pyc
 *.mo
 appengine_django/
-django.zip
+django.zip*
+django/
