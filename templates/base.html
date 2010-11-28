@@ -14,12 +14,8 @@
 </head>
 <body>
 	<div class="box">
-		<div id="main">
-			{% block content %}{% endblock %}
-		</div>
-		<div>
-			{% block content_end %}{% endblock %}
-		</div>
+		{% block content %}{% endblock %}
+		{% block content_end %}{% endblock %}
 	</div>
 	<div class="footer">
 		{% include "language_bar.html" %}

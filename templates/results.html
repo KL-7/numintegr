@@ -17,17 +17,17 @@
 			</p>
 		</div>
 	{% else %}
-		<table id="results">
+		<table class="results">
 			<thead>
 				<tr>
-					<th width="75%">{% trans "Method" %}</th>
+					<th width="75%" class="first-column">{% trans "Method" %}</th>
 					<th>{% trans "Result" %}</th>
 				</tr>
 			</thead>
 			<tbody>
 				{% for method in methods_results %}
-					<tr>
-						<td>
+					<tr{% if forloop.last %} class="last-row"{% endif %}>
+						<td class="first-column">
 							<p class="method-name">{{ method.name }}</p>
 							<p class="method-description">{{ method.description }}</p>
 						</td>
