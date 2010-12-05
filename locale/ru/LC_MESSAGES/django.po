@@ -194,7 +194,7 @@ msgstr "Если Вам действительно нужна эта стран�
 
 #: templates/404.html:9
 msgid "and I'll make it for you."
-msgstr "и я сделаю её для Вас."
+msgstr "и я сделаю её лично для Вас."
 
 #: templates/500.html:8
 msgid "Sorry, something went wrong."
