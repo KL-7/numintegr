@@ -94,7 +94,7 @@ msgstr "Функция не определена на данном интерв�
 
 #: core/numi.py:39
 msgid "The function is not defined on this interval (zero division occured)"
-msgstr "Функция не определена на данном интервале (деление на ноль)"
+msgstr "Функция не определена на данном интервале (произошло деление на ноль)"
 
 #: core/numi.py:42
 msgid "Sorry, integration failed for unknown reason"
