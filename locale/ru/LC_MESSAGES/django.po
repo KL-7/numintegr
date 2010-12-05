@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-12-05 12:11+0200\n"
+"POT-Creation-Date: 2010-12-05 12:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -183,6 +183,26 @@ msgstr "десятичный логарифм x"
 #: core/parser.py:58
 msgid "square root of x"
 msgstr "корень из x"
+
+#: templates/404.html:8
+msgid "Sorry, page not found."
+msgstr "Извините, страница не найдена."
+
+#: templates/404.html:9
+msgid "If you really need this page, email me at"
+msgstr "Если Вам действительно нужна эта страница, напишите мне на"
+
+#: templates/404.html:9
+msgid "and I'll make it for you."
+msgstr "и я сделаю её для Вас."
+
+#: templates/500.html:8
+msgid "Sorry, something went wrong."
+msgstr "Извините, что-то пошло не так."
+
+#: templates/500.html:9
+msgid "Server'll be told not to fail ever again."
+msgstr "Сервер будет наказан."
 
 #: templates/about.html:5 templates/navigation.html:12
 msgid "About"

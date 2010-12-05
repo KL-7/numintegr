@@ -83,6 +83,4 @@ def server_error(request, template_name='500.html'):
             Path of static media (e.g. "media.example.org")
     """
     t = loader.get_template(template_name) # Requeres 500.html template.
-    return http.HttpResponseServerError(t.render(Context({
-        'MEDIA_URL': settings.MEDIA_URL
-    })))
+    return http.HttpResponseServerError(t.render(RequestContext(request)))

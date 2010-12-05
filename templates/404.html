@@ -1,8 +1,10 @@
 {% extends "base_withback.html" %}
 
+{% load i18n %}
+
 {% block title %}404 - Not found{% endblock %}
 
 {% block content %}
-	<h2>Sorry, page not found.</h2>
-	<p>If you really need this page, email me at<img src="{{ MEDIA_URL }}images/mail.png" class="mail"/>and I'll make it for you.</p>
+	<h2>{% trans "Sorry, page not found." %}</h2>
+	<p>{% trans "If you really need this page, email me at" %}<img src="{{ MEDIA_URL }}images/mail.png" class="mail"/>{% trans "and I'll make it for you." %}</p>
 {% endblock %}

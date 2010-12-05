@@ -1,8 +1,10 @@
 {% extends "base_withback.html" %}
 
+{% load i18n %}
+
 {% block title %}500 - Internal Server Error{% endblock %}
 
 {% block content %}
-	<h2>Sorry, something went wrong.</h2>
-	<p>Server'll be told not to fail ever again.</p>
+	<h2>{% trans "Sorry, something went wrong." %}</h2>
+	<p>{% trans "Server'll be told not to fail ever again." %}</p>
 {% endblock %}
