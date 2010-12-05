@@ -218,7 +218,7 @@ msgid ""
 "at Wikipedia.org\" href=\"http://en.wikipedia.org/wiki/Numerical_integration"
 "\">numerical integration</a> using several basic method:"
 msgstr ""
-"простое веб-приложение для численного интегрирования с использованием "
+"&ndash; простое веб-приложение для численного интегрирования с использованием "
 "нескольких базовых методов:"
 
 #: templates/base_withback.html:6
