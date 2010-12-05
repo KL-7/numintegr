@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-11-28 15:47+0200\n"
+"POT-Creation-Date: 2010-12-05 12:11+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -85,8 +85,8 @@ msgid "Failed to parse the function"
 msgstr "Не удалось распарсить функцию"
 
 #: core/numi.py:34
-msgid "The function contains some undefined functions or variables"
-msgstr "Функция содержит неопределенные функции или переменные"
+msgid "The function contains some undefined functions and/or variables"
+msgstr "Функция содержит неопределенные функции и/или переменные"
 
 #: core/numi.py:37
 msgid "The function is not defined on this interval"
@@ -211,7 +211,7 @@ msgstr "Помощь"
 
 #: templates/help.html:10
 msgid ""
-"The function you're goind to integrate should be a function of the only x "
+"The function you're going to integrate should be a function of the only x "
 "argument and it should be defined everywhere on the interval of integration."
 msgstr ""
 "Подынтегральная функция должна быть функцией единственного аргумента x, "
@@ -220,10 +220,10 @@ msgstr ""
 #: templates/help.html:11
 msgid ""
 "In the function definition you can use all basic arithmetic operators (+, "
-"&minus;, *, /) and some other functions that are listed below:"
+"&minus;, *, /) and some other functions and constants that are listed below:"
 msgstr ""
 "В определнии функции Вы можете использовать все базовые арифметические "
-"операторы (+, &minus;, *, /) и некоторые дополнительные функции, "
+"операторы (+, &minus;, *, /) и некоторые дополнительные функции и константы, "
 "представленные ниже:"
 
 #: templates/index.html:10

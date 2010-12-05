@@ -31,7 +31,7 @@ def integrate(function_string, lower_limit=0, upper_limit=1,
     except SyntaxError:
         errors.append(_('Failed to parse the function'))
     except NameError:
-        errors.append(_('The function contains some undefined functions or '
+        errors.append(_('The function contains some undefined functions and/or '
                       'variables'))
     except ValueError:
         errors.append(_('The function is not defined on this interval'))
