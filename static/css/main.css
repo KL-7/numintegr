@@ -21,10 +21,10 @@ a:hover {
 }
 
 .box {
-	width: 700px;
+	width: 680px;
 	margin: 100px auto 0;
 	text-align: center;
-	padding: 20px;
+	padding: 20px 30px;
 	border: 1px solid #CCCCCC;
 	background: white;
 }
